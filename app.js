@@ -2,8 +2,9 @@ const express = require('express');
 
 const app = express();
 
-const PORT = 3000;
+//const PORT = 3000;
 
+port = process.env.PORT || 3000
 
 // define a route
 
@@ -40,6 +41,6 @@ app.set('view engine', 'ejs');
 
 // start server
 
-app.listen(PORT, () => {
-	console.log('Server is running on http://localhost:${PORT}');
+app.listen(port, () => {
+	console.log('Server is running on http://localhost:${port}');
 });
