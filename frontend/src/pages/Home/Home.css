@@ -1,0 +1,26 @@
+body, html {
+	height: 100%;
+	margin: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+.home-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #050505;
+    letter-spacing: -1px;
+    margin-right: 0.5rem; /* space between text and logo */
+    white-space: nowrap; /* Prevent wrapping in collapsed mode */
+    font-family: Helvetica, sans-serif; /* Apply Times New Roman font */
+}
+

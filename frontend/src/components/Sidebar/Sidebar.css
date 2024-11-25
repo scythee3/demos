@@ -1,0 +1,110 @@
+/* General Sidebar Styles */
+.sidebar {
+    background-color: #ffffff;
+    color: white;
+    height: 100vh;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    transition: width 0.3s ease-in-out;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.collapsed {
+    width: 80px;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+.sidebar-logo {
+    width: 30px; /* Adjust the size of the logo */
+    height: 30px;
+    margin-right: 0.5rem;
+    border-radius: 50%; /* Optional: Make it circular */
+}
+
+.sidebar-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2b2c2c;
+    letter-spacing: -1px;
+    margin-right: 0.5rem; /* space between text and logo */
+    white-space: nowrap; /* Prevent wrapping in collapsed mode */
+    font-family: Helvetica, sans-serif; /* Apply Times New Roman font */
+}
+
+.sidebar.collapsed .sidebar-title {
+    display: none; /* Hide the title when collapsed */
+}
+
+/* Toggle Button */
+.toggle-button {
+    font-size: 1.5rem;
+    background-color: #ffffff;
+    color: black;
+    border: none;
+    padding: 0.2rem;
+    width: 50px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: auto;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10%; /* makes toggle button circular */
+}
+
+.toggle-button:hover {
+    background-color: #d3d3d3;
+}
+
+/* Menu Items */
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.sidebar-item {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis when text is truncated */
+}
+
+.sidebar-item a {
+    color: black;
+    text-decoration: none;
+    padding: 0.5rem;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sidebar-item a:hover {
+    background-color: #d3d3d3;
+}
+
+.sidebar-item .active {
+    background-color: #d3d3d3;
+    color: black;
+}
+
+/* Adjustments for collapsed state */
+.sidebar.collapsed .sidebar-item {
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 0.5rem 0;
+}
