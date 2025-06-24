@@ -52,10 +52,8 @@ export default function SearchPage() {
     <div className="container mx-auto py-8 px-4">
       {/* Header */}
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold mb-2">Political Information Search</h1>
-        <p className="text-gray-600">
-          Search for current political information powered by Claude Opus 4
-        </p>
+        <h1 className="text-3xl font-bold mb-2">Search</h1>
+        
       </div>
       
       {/* Search Bar */}
