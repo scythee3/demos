@@ -27,27 +27,27 @@ import {
 const items = [
   {
     title: "Home",
-    url: "#",
+    url: "/",
     icon: Home,
   },
   {
     title: "Elections",
-    url: "#",
+    url: "/elections",
     icon: Vote,
   },
   {
     title: "Legislation",
-    url: "#",
+    url: "/legislation",
     icon: ScrollText,
   },
   {
     title: "Identity",
-    url: "#",
+    url: "/identity",
     icon: IdCard,
   }, 
   {
     title: "Forum",
-    url: "#",
+    url: "/forum",
     icon: Lightbulb,
   }, 
   {
@@ -57,7 +57,7 @@ const items = [
   },
   {
     title: "Settings",
-    url: "#",
+    url: "/settings",
     icon: Settings,
   },
 ]
