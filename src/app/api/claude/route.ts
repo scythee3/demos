@@ -52,11 +52,11 @@ export async function POST(request: NextRequest) {
       model: 'Claude Sonnet 4',
     });
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Claude API error:', error);
     
     // Handle specific API errors
-    if (error.status === 401) {
+    if ((error as any).status === 401) {
       return NextResponse.json(
         { error: 'Invalid API key. Please check your ANTHROPIC_API_KEY.' },
         { status: 401 }
@@ -64,7 +64,7 @@ export async function POST(request: NextRequest) {
     }
     
     return NextResponse.json(
-      { error: `Claude API error: ${error.message || 'Unknown error'}` },
+      { error: `Claude API error: ${(error as any).message || 'Unknown error'}` },
       { status: 500 }
     );
   }

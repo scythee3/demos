@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react';
 export default function Page() {
 
   const [displayedText, setDisplayedText] = useState("");
-  const fullText = "Decentralizing democracy.";
-  const typingSpeed = 150; // milliseconds per character
+  const fullText = "Decentralizing democracy. Defining trustless government.";
+  const typingSpeed = 100; // milliseconds per character
 
   useEffect(() => {
     let currentIndex = 0;
@@ -19,7 +19,7 @@ export default function Page() {
     };
 
     // Start typing after a small delay
-    const startDelay = setTimeout(typeWriter, 2000);
+    const startDelay = setTimeout(typeWriter, 1500);
     
     return () => clearTimeout(startDelay);
   }, []);

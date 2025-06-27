@@ -8,7 +8,8 @@ import {
   ScrollText,
   IdCard,
   Zap,
-  Lightbulb
+  Lightbulb,
+  BookOpenText
 } from "lucide-react"
 
 import {
@@ -49,6 +50,11 @@ const items = [
     title: "Forum",
     url: "/forum",
     icon: Lightbulb,
+  }, 
+  {
+    title: "Learn",
+    url: "/learn",
+    icon: BookOpenText,
   }, 
   {
     title: "Search",
