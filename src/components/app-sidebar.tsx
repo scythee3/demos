@@ -117,7 +117,7 @@ export function AppSidebar() {
                 <DialogHeader>
                   <DialogTitle>Support Our Mission</DialogTitle>
                   <DialogDescription>
-                    Help us continue building tools to decentralize democracy and create trustless government. 
+                    If you can afford it, any contribution will help us continue building tools to decentralize democracy and create trustless government.
                   </DialogDescription>
                 </DialogHeader>
                 <div className="grid gap-4 py-4">
@@ -131,7 +131,7 @@ export function AppSidebar() {
                 </div>
                 <DialogFooter>
                   <p className="text-xs text-muted-foreground text-center w-full">
-                    Your donation helps maintain our servers and fund development of new features.
+                    If you can't afford it, no worries! Your support by using and spreading the word about Demos is invaluable and greatly appreciated.
                   </p>
                 </DialogFooter>
               </DialogContent>
