@@ -9,7 +9,8 @@ import {
   IdCard,
   Zap,
   Lightbulb,
-  BookOpenText
+  BookOpenText,
+  Heart
 } from "lucide-react"
 
 import {
@@ -23,6 +24,18 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogFooter,
+} from "@/components/ui/dialog"
+
+import { Button } from "@/components/ui/button"
 
 // Menu items.
 const items = [
@@ -93,10 +106,36 @@ export function AppSidebar() {
       <SidebarFooter>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton>
-              <Settings />
-              <span>Settings</span>
-            </SidebarMenuButton>
+            <Dialog>
+              <DialogTrigger asChild>
+                <SidebarMenuButton>
+                  <Heart />
+                  <span>Donate</span>
+                </SidebarMenuButton>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>Support Our Mission</DialogTitle>
+                  <DialogDescription>
+                    Help us continue building tools to decentralize democracy and create trustless government. 
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="grid gap-4 py-4">
+                  <div className="grid grid-cols-1 gap-4">
+                    <p>Bitcoin address: </p>
+                    <p>Ethereum address: </p>
+                    <p>Cardano address: </p>
+                    <p>Midnight address: </p>
+                  </div>
+                  
+                </div>
+                <DialogFooter>
+                  <p className="text-xs text-muted-foreground text-center w-full">
+                    Your donation helps maintain our servers and fund development of new features.
+                  </p>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarFooter>
