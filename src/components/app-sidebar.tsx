@@ -10,7 +10,8 @@ import {
   Zap,
   Lightbulb,
   BookOpenText,
-  Heart
+  Heart,
+  Info
 } from "lucide-react"
 
 import {
@@ -79,6 +80,11 @@ const items = [
     url: "/settings",
     icon: Settings,
   },
+  {
+    title: "About",
+    url: "/about",
+    icon: Info,
+  }
 ]
 
 export function AppSidebar() {
